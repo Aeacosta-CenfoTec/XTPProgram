@@ -1,0 +1,48 @@
+PINMAP {
+    PIN VDD_CORE TYPE POWER;
+    PIN GND TYPE GROUND;
+    PIN CAM_CLK TYPE INPUT;
+    PIN MIPI_DATA TYPE INOUT;
+    PIN ALERT_N TYPE OUTPUT;
+}
+
+LEVELS {
+    V_DD_CORE = 1.20V;
+    V_IH = 0.84V;
+    V_IL = 0.36V;
+    V_OH = 0.96V;
+    V_OL = 0.24V;
+}
+
+TIMING {
+    period_ns = 5.0;
+    drive_high_ns = 2.5;
+    drive_low_ns = 2.5;
+    strobe_ns = 4.2;
+}
+
+PARAMETRICS {
+    I_DDQ_MAX = 15.0mA;
+    I_IH_MAX = 1.0uA;
+    I_IL_MAX = 1.0uA;
+}
+
+FUNCTIONS {
+    VECTOR CAM_CLK MIPI_DATA ALERT_N;
+    CYCLE (0, "Z", "H");
+    CYCLE (1, "1", "H");
+    CYCLE (0, "0", "L");
+    CYCLE (1, "1", "H");
+    CYCLE (0, "0", "L");
+    CYCLE (1, "1", "H");
+    CYCLE (0, "0", "L");
+    CYCLE (1, "1", "H");
+}
+
+BINNING {
+    PASS_PRIME -> HB_1, SB_1001;
+    PASS_ECO -> HB_1, SB_1003;
+    FAIL_DIODE -> HB_2, SB_2001;
+    FAIL_LEAKAGE -> HB_3, SB_3001;
+    FAIL_TIMING -> HB_4, SB_4001;
+}
