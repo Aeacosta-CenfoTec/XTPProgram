@@ -7,7 +7,7 @@ PINMAP {
 }
 
 LEVELS {
-    V_DD_CORE = 1.20V;
+    V_DD_CORE = 0.95V;
     V_IH = 0.84V;
     V_IL = 0.36V;
     V_OH = 0.96V;
