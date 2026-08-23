@@ -18,7 +18,7 @@ TIMING {
     period_ns = 5.0;
     drive_high_ns = 2.5;
     drive_low_ns = 2.5;
-    strobe_ns = 4.2;
+    strobe_ns = 3.1;
 }
 
 PARAMETRICS {
