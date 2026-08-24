@@ -22,7 +22,7 @@ TIMING {
 }
 
 PARAMETRICS {
-    I_DDQ_MAX = 15.0mA;
+    I_DDQ_MAX = 8.0mA;
     I_IH_MAX = 1.0uA;
     I_IL_MAX = 1.0uA;
 }
