@@ -11,7 +11,7 @@ LEVELS {
     V_IH = 0.84V;
     V_IL = 0.36V;
     V_OH = 0.96V;
-    V_OL = 0.24V;
+    V_OL = 0.32V;
 }
 
 TIMING {
